@@ -1,5 +1,3 @@
-
-
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
@@ -7,8 +5,6 @@ const { v4: uuidv4 } = require('uuid');
 const { getLinksFromURL } = require('.');
 
 var baseUrl = 'https://www.geeksforgeeks.org/what-is-web-scraping-and-how-to-use-it/';
-
-
 
 const downloadFile = async (fileUrl, outputLocationPath) => {
     try {
