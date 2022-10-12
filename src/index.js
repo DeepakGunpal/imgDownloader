@@ -14,7 +14,7 @@ app.post('/getImage', async (req, res) => {
         const baseUrl = req.body.url;
         let homePageLinks = await getLinksFromURL(baseUrl)
         const files = homePageLinks.filter(file => {
-            return file.src !== '' && file.src.split(':')[0] === ('https' || 'http')
+            return file.src !== '' && file.src.split(':')[0] === 'https'
         })
         if (files.length === 0) return res.status(200).send({ status: true, message: 'No files found' });
         for (let i = 0; i < files.length; i++) {
